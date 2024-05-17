@@ -10,7 +10,7 @@ export const track = async (stack: TerraformStack): Promise<string[]> => {
   for (let i = 0; i < artistsOrder.length; i++) {
     const artist = artistsOrder[i]
     const name = artistSongs.get(artist)
-    if (artist && name && i < 8) {
+    if (artist && name) {
       const track = new DataSpotifySearchTrack(stack, `search_tracks${i}`, {
         artist,
         name,
