@@ -13,7 +13,7 @@ class MySpotifyStack extends TerraformStack {
       apiKey: Token.asString(process.env.SPOTIFY_API_KEY),
     })
   }
-  async processTrackIds() {
+  processTrackIds = async () => {
     const trackIds = await track(this)
     playlist(this, trackIds)
   }

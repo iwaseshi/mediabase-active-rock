@@ -1,7 +1,7 @@
 import { TerraformOutput, TerraformStack } from "cdktf"
 import { Playlist, PlaylistConfig } from "../.gen/providers/spotify/playlist"
 
-export function playlist(stack: TerraformStack, trackIds: string[]) {
+export const playlist = (stack: TerraformStack, trackIds: string[]) => {
   const spotifyPlaylist = new Playlist(stack, "mediabase_active_rock", <
     PlaylistConfig
   >{
@@ -16,7 +16,7 @@ export function playlist(stack: TerraformStack, trackIds: string[]) {
   })
 }
 
-function title(): string {
+const title = (): string => {
   const now = new Date()
   const formattedNow = `${now
     .toLocaleString("default", { month: "short" })

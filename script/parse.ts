@@ -5,10 +5,10 @@ interface RowData {
   song: string
 }
 
-export async function parseRockChart(): Promise<{
+export const parseRockChart = async (): Promise<{
   artistSongs: Map<string, string>
   artistsOrder: string[]
-}> {
+}> => {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 

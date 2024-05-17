@@ -2,7 +2,7 @@ import { TerraformStack } from "cdktf"
 import { DataSpotifySearchTrack } from "../.gen/providers/spotify/data-spotify-search-track"
 import { parseRockChart } from "../script/parse"
 
-export async function track(stack: TerraformStack): Promise<string[]> {
+export const track = async (stack: TerraformStack): Promise<string[]> => {
   const { artistSongs, artistsOrder } = await parseRockChart()
 
   const ids: string[] = []
