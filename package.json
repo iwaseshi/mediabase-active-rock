@@ -1,0 +1,29 @@
+{
+  "name": "mediabase-active-rock-playlist",
+  "version": "1.0.0",
+  "main": "main.js",
+  "types": "main.ts",
+  "license": "MPL-2.0",
+  "private": true,
+  "scripts": {
+    "get": "cdktf get",
+    "build": "tsc",
+    "synth": "cdktf synth",
+    "compile": "tsc --pretty",
+    "watch": "tsc -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "upgrade": "npm i cdktf@latest cdktf-cli@latest",
+    "upgrade:next": "npm i cdktf@next cdktf-cli@next"
+  },
+  "engines": {
+    "node": ">=18.0"
+  },
+  "dependencies": {
+    "@types/puppeteer": "^7.0.4",
+    "cdktf": "^0.20.7",
+    "constructs": "^10.3.0",
+    "dotenv": "^16.4.5",
+    "puppeteer": "^22.9.0"
+  }
+}
