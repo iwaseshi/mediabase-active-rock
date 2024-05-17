@@ -2,6 +2,6 @@
 
 Generator of Mediabase Active Rock's Spotify Playlist
 
-## 　　preparation
+## preparation
 
 <https://learn.hashicorp.com/tutorials/terraform/spotify-playlist>
