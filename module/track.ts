@@ -16,8 +16,8 @@ export const track = async (stack: TerraformStack): Promise<string[]> => {
         name,
       })
 
-      if (track.tracks && track.tracks.get(0) && track.tracks.get(0).id) {
-        ids.push(track.tracks.get(0)?.id)
+      if (track.tracks) {
+        ids.push(track.tracks.get(0).id)
       } else {
         console.log(`No tracks found for ${artist}`)
       }
